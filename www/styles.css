@@ -1,0 +1,73 @@
+:root{
+  --accent: #ff5c8a;
+  --accent2: #ffb3c6;
+}
+
+.hero {
+  padding: 22px 18px 14px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,92,138,.18), rgba(255,179,198,.08));
+  border: 1px solid rgba(255,255,255,.10);
+  margin-bottom: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+}
+.hero h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.hero .sub {
+  margin-top: 6px;
+  opacity: .9;
+  font-size: 1.05rem;
+}
+.accent { color: var(--accent2); }
+
+.cardish {
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 16px 30px rgba(0,0,0,.35);
+}
+
+.source-line a {
+  color: var(--accent2) !important;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255,179,198,.55);
+}
+.source-line a:hover { border-bottom-style: solid; }
+
+.pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999opx;
+  background: rgba(255,92,138,.18);
+  border: 1px solid rgba(255,92,138,.35);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: .95rem;
+}
+
+.soft-hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  margin: 18px 0;
+}
+
+table {
+  width: 100%;
+}
+.table {
+  margin-top: 10px;
+}

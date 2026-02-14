@@ -19,7 +19,7 @@ puppies <- tibble::tribble(
   "bernese mountain dog","yngXHs2eS_M", "PetPonder",
   "golden retriever", "9LkqymZFLrE", "billstephan",
   "labrador", "czHm-pEraKM", "garrettkaroski",
-  "child_playing-w/sheep, I mean, great Pyrenees","Ziuo9zxhTog", "lauraohlman",
+  "child_playing-w/sheep, I mean, Great Pyrenees","Ziuo9zxhTog", "lauraohlman",
   "rottweiler", "R0y2bRvuDoc", "shanarajpoot",
   "saint-bernard", "veUSWM5CTbM", "marshall-public-library"
 )
@@ -58,7 +58,7 @@ ui <- fluidPage(
       card_body(selectInput("id", NULL,
                             choices = setNames(puppies$id, puppies$breed)),
       div(class = "source-line", uiOutput("source")),
-      div(class = "photo-frame", imageOutput("photo", width = "100%"))
+      div(class = "photo-frame", uiOutput("photo"))
       )
     ),
   
@@ -105,12 +105,14 @@ ui <- fluidPage(
 
 # Server component
 server <- function(input, output) {
-  output$photo <- renderImage({
-    list(
-      src = file.path("puppy-pics", paste0(input$id, ".jpg")),
-      contentType = "image/jpeg"
+  output$photo <- renderUI({
+    req(input$id)
+    tags$img(
+      src = paste0("puppy-pics/", input$id, ".jpg"),
+      alt = "Puppy photo",
+      style = "width:100%; height:auto;"
     )
-  }, deleteFile = FALSE)
+  })
   
   output$source <- renderUI({
     info <- puppies |> filter(id == input$id)

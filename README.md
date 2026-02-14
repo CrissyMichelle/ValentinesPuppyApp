@@ -7,4 +7,3 @@ A tiny Shiny app that renderImages puppy pics and plot_clicks some Ol'Faithful s
 ```r
 shiny::runApp() 
 
-(Live site coming soon)

@@ -30,12 +30,18 @@ ui <- fluidPage(
   # Create theme with Bootstrap library
   theme = bs_theme(
     bootswatch = "darkly",
-    base_font = font_google("SN Pro"),
-    heading_font = font_google("Poppins")
   ),
   # Add styles.css for gift energy
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")
+    tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
+    
+    # Google fonts loaded by browser, not by R
+    tags$link(rel = "preconnect", href = "https://fonts.googleapis.com"),
+    tags$link(rel = "preconnect", href = "https://fonts.gstatic.com", crossorigin = NA),
+    tags$link(
+      rel = "stylesheet",
+      href = "https://fonts.googleapis.com/css2?family=SN+Pro:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+    )
   ),
   
   # HERO

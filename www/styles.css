@@ -4,11 +4,11 @@
 }
 
 body {
-  font-family: "SN Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 h1, h2, h3, .card-header {
-  font-family: "Poppins", "SN Pro", system-ui, sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 .hero {

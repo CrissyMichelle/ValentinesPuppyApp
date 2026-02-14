@@ -29,7 +29,7 @@ puppies <- tibble::tribble(
 ui <- fluidPage(
   # Create theme with Bootstrap library
   theme = bs_theme(
-    bootswatch = "darkly",
+    bootswatch = "darkly"
   ),
   # Add styles.css for gift energy
   tags$head(
@@ -40,7 +40,7 @@ ui <- fluidPage(
     tags$link(rel = "preconnect", href = "https://fonts.gstatic.com", crossorigin = NA),
     tags$link(
       rel = "stylesheet",
-      href = "https://fonts.googleapis.com/css2?family=SN+Pro:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+      href = "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
     )
   ),
   
@@ -176,7 +176,7 @@ server <- function(input, output) {
         geom_point(alpha = 0.7) +
         labs(
           title = "Eruptions versus waiting time",
-          subtitle = "Click in plot to see the closes observations (table below)",
+          subtitle = "Click in the plot to see the closest observations (table below)",
           x = "Waiting time (minutes)",
           y = "Eruption duration (minutes)"
         ) +
